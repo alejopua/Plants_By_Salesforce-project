@@ -1,3 +1,24 @@
+// SOQL QUERY BUILDER
+
+// PASO 1
+// sfdx force:data:tree:export -q SELECT Id, Name, (SELECT Name, Address__c FROM Properties__r) FROM Broker__c" -d data
+//ó
+// sf data export tree -q "SELECT Id, Name, (SELECT Name, Address__c FROM Properties__r) FROM Broker__c" -d data
+
+//PASO 2
+// sfdx force:data:tree:import -p ./data/data-plan.json 
+//ó
+// sf data import tree -p ./data/data-plan.json
+//
+// [
+//   {
+//     "sobject": "Species__c",
+//     "saveRefs": true,
+//     "resolveRefs": false,
+//     "files": ["Species__c.json"]
+//   }
+// ]
+
 {
     "records": [
         {
