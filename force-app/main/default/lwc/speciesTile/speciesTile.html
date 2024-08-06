@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title={specie.Name} icon-name="custom:custom5">
+    <lightning-button label="View Details" slot="actions"></lightning-button>
+    <div class="slds-card__body slds-card__body_inner">
+      <p class="description slds-var-p-bottom_small">{specie.Description__c}</p>
+      <div class="slds-align_absolute-center">
+        <img 
+          class="specie" 
+          src={specie.Image_URL__c} 
+          alt={specie.Name}
+        />
+      </div>
+      <p class="slds-var-p-top_small">{specie.Location__c}</p>
+    </div>
+  </lightning-card>
+</template>
