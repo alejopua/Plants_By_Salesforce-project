@@ -4,6 +4,8 @@
     "prettier-plugin-apex",
     "@prettier/plugin-xml"
   ],
+  "tabWidth": 2,
+  "useTabs": false,
   "overrides": [
     {
       "files": "**/lwc/**/*.html",
