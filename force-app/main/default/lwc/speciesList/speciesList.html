@@ -1,0 +1,18 @@
+<!-- la etiqueta template es la que se usa para definir una plantilla -->
+<!-- <template lwc:if={species.data}> 
+<template lwc:elseif={species.error}> 
+<template lwc:else> -->
+<template> 
+	<div class="slds-grid slds-wrap slds-gutters slds-align_absolute-center">
+		<template if:true={species.data}>
+			<template for:each={species.data} for:item="spec">
+				<div key={spec.Id}>
+					<c-species-tile 
+						specie={spec}
+						class="slds-col slds-var-p-around_x-small"
+					></c-species-tile>
+				</div>
+			</template>
+		</template>
+	</div>
+</template>
